@@ -1,0 +1,30 @@
+Git Commands
+
+1. create a new repos on github
+
+2. On Git Bash: cd to current working directory to local project
+
+3. Initialize local repos:
+	$ git init
+
+4. Add files in local repos: 
+	$ git add .
+
+5. Commit:
+	$ git commit -m "message for commit"
+		
+6. Add the url for the remote repos.
+	$ git remote add [remote-url]
+	
+7. verify remotes:
+    $ git remote -v
+	
+8. Pull 1st b4 push
+    $ git pull origin master
+
+9. Push changes to remote repos.  
+    
+    $ git push origin master
+    
+10. Check status
+    $ git status

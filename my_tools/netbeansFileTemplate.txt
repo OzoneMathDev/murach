@@ -1,0 +1,7 @@
+Update the comment depending on the file type: java, jsp, html, servlet, etc...
+
+/**
+ * Document   : ${name}
+ * @author ${user}
+ * Created on : ${date}, ${time}
+ */
