@@ -23,7 +23,7 @@ label {
     padding-top: .3em;
     font-weight: bold;
 }
-input[type="text"], input[type="email"] {  /* An attribute selector */
+input[type="text"], input[type="email"], input[type="date"] {  /* An attribute selector */
     width: 15em;
     margin-left: 0.5em;    
     margin-bottom: 0.5em;
