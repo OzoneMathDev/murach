@@ -1,0 +1,16 @@
+#Git IGNORE Files
+
+#Create .ignore file in your repo folder
+
+#Run following cmds
+#0)$ git config --global core.excludesfile ~/gitignore_global
+#1)git rm -r --cached .
+#2)git add .
+#3)git commit -m ".gitignore is now working"
+
+#Angular Library Files
+angular*.js
+bootstrap*.*
+ngmodules/
+test.*
+todo*.*
