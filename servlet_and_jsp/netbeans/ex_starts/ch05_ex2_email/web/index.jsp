@@ -9,8 +9,8 @@
     <h1>Join our email list</h1>
     <p>To join our email list, enter your name and
        email address below.</p>
-    <p><i>${message}</i></p>
-    <form action="emailList" method="post">
+    <p><i id="errorMsg">${message}</i></p>
+    <form action="${pageContext.request.contextPath}/test" method="post">
         <input type="hidden" name="action" value="add">        
         <label class="pad_top">Email:</label>
         <input type="email" name="email" value="${user.email}"><br>

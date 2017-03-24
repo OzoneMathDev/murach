@@ -14,7 +14,7 @@ public class EmailListServlet extends HttpServlet {
             HttpServletResponse response)
             throws ServletException, IOException {
         String url = "/index.jsp";
-        
+
         // get current action
         String action = request.getParameter("action");
         if (action == null) {
@@ -24,24 +24,26 @@ public class EmailListServlet extends HttpServlet {
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
             url = "/index.jsp";    // the "join" page
-        } 
-        else if (action.equals("add")) {
+        } else if (action.equals("add")) {
             // get parameters from the request
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
-            
+
             // store data in User object
             User user = new User(firstName, lastName, email);
 
             // validate the parameters
             String message;
-            if (firstName == null || lastName == null || email == null ||
-                firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
+            if (firstName == null || lastName == null || email == null
+                    || firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
                 url = "/index.jsp";
-            } 
-            else {
+                //print error msg to console
+                System.out.println("EmailListServlet message: " + message);
+                //print error msg to console
+                log("EmailListServlet message: " + message);
+            } else {
                 message = "";
                 url = "/thanks.jsp";
                 UserDB.insert(user);
@@ -52,5 +54,12 @@ public class EmailListServlet extends HttpServlet {
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doPost(request, response);
+
     }
 }
