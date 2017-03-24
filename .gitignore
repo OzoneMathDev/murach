@@ -2,3 +2,30 @@
 /servlet_and_jsp/netbeans/ex_starts/ch04_ex1_survey/dist/
 /servlet_and_jsp/netbeans/ex_starts/ch05_ex2_email/build/
 /servlet_and_jsp/netbeans/ex_starts/ch05_ex2_email/dist/
+
+#no compiles class files
+ *.class
+ 
+ #no private folder
+ java/**/private/
+ servlet_and_jsp/**/private/
+ 
+ #no log files 
+ *.log
+
+ # BlueJ files
+ *.ctxt
+
+ # Mobile Tools for Java (J2ME)
+ .mtj.tmp/
+
+ # Package Files #
+ *.jar
+ *.war
+ *.ear
+ *.zip
+ *.tar.gz
+ *.rar
+
+ # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+ hs_err_pid*

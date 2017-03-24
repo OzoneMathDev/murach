@@ -1,6 +1,6 @@
 #Git IGNORE Files
 
-#Create .ignore file in your repo folder
+#Create .gitignore file in your repo folder
 
 #Run following cmds
 #0)$ git config --global core.excludesfile ~/gitignore_global
