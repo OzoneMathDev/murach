@@ -1,6 +1,8 @@
 package murach.email;
 
 import java.io.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -13,6 +15,10 @@ public class EmailListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
+        //ex6-1: set current year as request attribute
+        GregorianCalendar gc = new GregorianCalendar();
+        int currentYear = gc.get(Calendar.YEAR);
+        request.setAttribute("currentYear", currentYear);
         String url = "/index.html";
         
         // get current action
